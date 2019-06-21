@@ -52,7 +52,9 @@ SCNvim {
         var snippetPath = rootDir +/+ "scnvim-data/supercollider.snippets";
         Routine.run {
             SCNvim.generateTags(tagsPath);
+            1.wait;
             SCNvim.generateSyntax(syntaxPath);
+            1.wait;
             SCNvim.generateSnippets(snippetPath);
         };
     }
