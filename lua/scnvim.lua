@@ -1,6 +1,7 @@
 local udp = require('udp')
 local utils = require('utils')
 local help = require('help')
+local introspection = require('introspection')
 
 local scnvim = {}
 
@@ -17,7 +18,7 @@ end
 --- Print function signature
 function Methods.method_args(args)
   if not args then return end
-  print(args)
+  introspection.show_signature(args)
 end
 
 --- Open a help file
